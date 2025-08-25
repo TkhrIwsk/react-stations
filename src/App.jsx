@@ -1,6 +1,8 @@
 // DO NOT DELETE
 
 import './App.css'
+/*Reactのimport*/ 
+import{useState}from "react";
 
 /**
  * @type {() => JSX.Element}
@@ -12,12 +14,12 @@ const[dogUrl, setDogUrl] = useState(
 
   return (
     <div>
-      <header>アプリ</header>
+      <header>犬の画像</header>
       <main>
         <img 
           src={dogUrl}   // state を利用
           width="400"
-          alt="犬の画像"
+          alt="ランダムに抽出した犬の画像"
         />
       </main>
     </div>
