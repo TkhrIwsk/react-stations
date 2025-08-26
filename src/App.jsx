@@ -8,9 +8,27 @@ import{useState}from "react";
  * @type {() => JSX.Element}
  */
 export const App = () => {
-const[dogUrl, setDogUrl] = useState(
-    "https://images.dog.ceo/breeds/terrier-russell/jack-koda-1.jpg"
-  );
+  const[dogUrl, setDogUrl] = useState(
+      "https://images.dog.ceo/breeds/terrier-russell/jack-koda-1.jpg"
+    );
+
+    const FetchRandomImage = () => {
+      const DogAPI = "https://dog.ceo/api/breeds/image/random";
+      
+      fetch(DogAPI)
+      .then((response)=>{
+        if(!response.ok){
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data)=>{
+        setDogUrl(data.message);
+      })
+      .catch((error)=>{
+        console.error("Fetch Error:", error);
+      }); 
+    }
 
   return (
     <div>
@@ -22,7 +40,7 @@ const[dogUrl, setDogUrl] = useState(
           alt="ランダムに抽出した犬の画像"
         />
 
-        <button onClick={() => setDogUrl("https://images.dog.ceo/breeds/hound-blood/n02088466_8320.jpg")}>
+        <button onClick={FetchRandomImage}>
           画像を変更
         </button>
       </main>
