@@ -21,6 +21,10 @@ const[dogUrl, setDogUrl] = useState(
           width="400"
           alt="ランダムに抽出した犬の画像"
         />
+
+        <button onClick={() => setDogUrl("https://images.dog.ceo/breeds/hound-blood/n02088466_8320.jpg")}>
+          画像を変更
+        </button>
       </main>
     </div>
   );
