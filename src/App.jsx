@@ -32,8 +32,8 @@ export const App = () => {
 
   return (
     <div>
-      <header>犬の画像</header>
-      <main>
+      <header className="Header">犬の画像</header>
+      <main className="Dog_image"> 
         <img 
           src={dogUrl}   // state を利用
           width="400"
