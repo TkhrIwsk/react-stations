@@ -1,7 +1,11 @@
 // @ts-check
 
 export const Header = () => {
-  return <></>
+  return (
+    <header className="Header">
+      <h1>犬の画像</h1>
+    </header>
+  ); 
 }
 
-export default Header
+/*export default Header*/

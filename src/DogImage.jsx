@@ -1,7 +1,8 @@
 // @ts-check
 
-export const DogImage = () => {
-  return <></>
+// @ts-ignore
+export const DogImage = ({imageUrl}) => {
+   return <img src={imageUrl} alt="犬の画像" width="400" />;
 }
 
-export default DogImage
+//export default DogImage
