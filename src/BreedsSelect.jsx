@@ -1,8 +1,4 @@
-// @ts-check
-
-// @ts-ignore
 export const BreedsSelect = ({ breeds, selectedBreed, setSelectedBreed }) => {
-  // @ts-ignore
   const handleChange = (event) => {
     setSelectedBreed(event.target.value);
   };
@@ -16,9 +12,7 @@ export const BreedsSelect = ({ breeds, selectedBreed, setSelectedBreed }) => {
         onChange={handleChange}
       >
         <option value="">-- 選択してください --</option>
-        {breeds.map((
-// @ts-ignore
-        breed) => (
+        {breeds.map((breed) => (
           <option key={breed} value={breed}>
             {breed}
           </option>
