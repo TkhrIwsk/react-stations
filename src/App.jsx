@@ -3,6 +3,7 @@
 import './App.css'
 /*Reactのimport*/ 
 import{useState}from "react";
+import { DogListContainer } from "./DogListContainer"; 
 
 /*ヘッダーのimport*/
 import {Header} from "./Header";
